@@ -15,7 +15,7 @@ sidebar_label: Week 18 - RNNs
 - Apply to time series and text
 
 ## Core Concepts
-- **RNN**: h_t = tanh(W_hh h_{t-1} + W_xh x_t + b)
+- **RNN**: `h_t = tanh(W_hh h_{t-1} + W_xh x_t + b)`
 - **LSTM**: Forget, input, and output gates
 - **BPTT**: Backpropagate through time steps
 - **Vanishing Gradients**: Challenge with long sequences
