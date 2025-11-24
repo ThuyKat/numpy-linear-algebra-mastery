@@ -113,50 +113,54 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
-      // links: [
-      //   {
-      //     title: 'Docs',
-      //     items: [
-      //       {
-      //         label: 'Tutorial',
-      //         to: '/docs/intro',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: 'Community',
-      //     items: [
-      //       {
-      //         label: 'Stack Overflow',
-      //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //       },
-      //       {
-      //         label: 'Discord',
-      //         href: 'https://discordapp.com/invite/docusaurus',
-      //       },
-      //       {
-      //         label: 'X',
-      //         href: 'https://x.com/docusaurus',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: 'More',
-      //     items: [
-      //       {
-      //         label: 'Blog',
-      //         to: '/blog',
-      //       },
-      //       {
-      //         label: 'GitHub',
-      //         href: 'https://github.com/facebook/docusaurus',
-      //       },
-      //     ],
-      //   },
-      // ],
-      copyright: `Learning in public © ${new Date().getFullYear()}. Built with Docusaurus.`,
+  style: 'dark',
+  links: [
+    {
+      title: 'Learn',
+      items: [
+        {
+          label: 'Weekly Content',
+          to: '/docs/weekly-content/introduction',
+        },
+        {
+          label: 'Projects',
+          to: '/docs/projects/overview',
+        },
+        {
+          label: 'Notes',
+          to: '/docs/notes/overview',
+        },
+      ],
     },
+    {
+      title: 'Resources',
+      items: [
+        {
+          label: 'Coursera - Deep Learning',
+          href: 'https://www.coursera.org/specializations/deep-learning',
+        },
+        {
+          label: 'NumPy Documentation',
+          href: 'https://numpy.org/doc/',
+        },
+      ],
+    },
+    {
+      title: 'More',
+      items: [
+        {
+          label: 'Blog',
+          to: '/blog',
+        },
+        {
+          label: 'GitHub',
+          href: 'https://github.com/YOUR_USERNAME/numpy-linear-algebra-mastery',
+        },
+      ],
+    },
+  ],
+  copyright: `Learning in public © ${new Date().getFullYear()} ThuyKat`,
+},
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

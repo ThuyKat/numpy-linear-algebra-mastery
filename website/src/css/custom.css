@@ -5,7 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
-:root {
+/* :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -15,10 +15,10 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+/* [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,4 +27,208 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+} */
+:root {
+  /* NumPy blue (primary), Python yellow (secondary), subtle supporting colors */
+  --ifm-color-primary: #013243;       /* Deep Teal (NumPy Blue) */
+  --ifm-color-primary-dark: #012635;
+  --ifm-color-primary-darker: #011e28;
+  --ifm-color-primary-darkest: #001920;
+  --ifm-color-primary-light: #135fa7; /* Slightly brighter NumPy blue for accents */
+  --ifm-color-primary-lighter: #4D77CF; /* Official NumPy Blue */
+  --ifm-color-primary-lightest: #90b4e8;
+
+  --ifm-color-secondary: #FFD43B;     /* Python Yellow */
+  --ifm-color-info: #4B0082;          /* Deep Math Purple (for links/buttons) */
+  --ifm-color-success: #25c2a0;       /* Math/Science Teal for callouts */
+  --ifm-color-warning: #FF7F50;       /* Vibrant Coral (for highlights/errors) */
+
+  --ifm-code-font-size: 98%;
+  --ifm-code-background: #f5f7fa;
+  --docusaurus-highlighted-code-line-bg: rgba(77, 119, 207, 0.12);
+}
+
+/* Dark mode: Brighter, higher contrast blue & yellow, softened background */
+[data-theme='dark'] {
+  --ifm-color-primary: #4D77CF;       /* NumPy blue for headers/buttons */
+  --ifm-color-primary-dark: #3d5ea0;
+  --ifm-color-primary-darker: #2c4572;
+  --ifm-color-primary-darkest: #192745;
+  --ifm-color-primary-light: #5c84d6;
+  --ifm-color-primary-lighter: #90b4e8;
+  --ifm-color-primary-lightest: #B9D4F6;
+
+  --ifm-color-secondary: #FFD43B;             /* Python yellow, still pops */
+  --ifm-color-info: #9f7aea;                  /* Soft Electric Cyan/Purple accent */
+  --ifm-color-success: #25c2a0;
+  --ifm-color-warning: #FF7F50;
+
+  --ifm-code-background: #20233b;
+  --docusaurus-highlighted-code-line-bg: rgba(77, 119, 207, 0.28);
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom navbar styling */
+.navbar {
+  background: rgba(1, 50, 67, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__title {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.navbar__link {
+  font-weight: 600;
+}
+
+.navbar__link--active {
+  color: #FFD43B !important;
+}
+
+/* Custom button styles */
+.button {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background: #4D77CF;
+  border-color: #4D77CF;
+}
+
+.button--primary:hover {
+  background: #3d5ea0;
+  border-color: #3d5ea0;
+  transform: translateY(-2px);
+}
+
+.button--secondary {
+  background: transparent;
+  border: 2px solid #4D77CF;
+  color: #4D77CF;
+}
+
+.button--secondary:hover {
+  background: #4D77CF;
+  color: white;
+}
+
+/* Custom sidebar styling */
+.theme-doc-sidebar-container {
+  border-right: 1px solid rgba(77, 119, 207, 0.1);
+}
+
+.menu__link {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background: rgba(77, 119, 207, 0.1);
+  color: #4D77CF;
+}
+
+.menu__link--active {
+  background: rgba(77, 119, 207, 0.15);
+  color: #4D77CF;
+  font-weight: 600;
+}
+
+/* Code blocks */
+.prism-code {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Admonitions (callouts) */
+.admonition {
+  border-radius: 12px;
+  border-left-width: 5px;
+}
+
+.admonition-note {
+  border-color: #4D77CF;
+  background: rgba(77, 119, 207, 0.05);
+}
+
+.admonition-tip {
+  border-color: #25c2a0;
+  background: rgba(37, 194, 160, 0.05);
+}
+
+.admonition-warning {
+  border-color: #FF7F50;
+  background: rgba(255, 127, 80, 0.05);
+}
+
+/* Tables */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background: #4D77CF;
+  color: white;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background: #013243;
+  color: white;
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__link-item:hover {
+  color: #FFD43B;
+}
+
+/* Pagination */
+.pagination-nav__link {
+  border: 2px solid rgba(77, 119, 207, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: #4D77CF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(77, 119, 207, 0.15);
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  color: #4D77CF;
+  font-weight: 600;
+}
+
+.breadcrumbs__link:hover {
+  color: #3d5ea0;
+}
+
+/* TOC (Table of Contents) */
+.table-of-contents__link {
+  color: #666;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: #4D77CF;
+  font-weight: 600;
 }
