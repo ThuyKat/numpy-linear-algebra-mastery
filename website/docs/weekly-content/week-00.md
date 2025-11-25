@@ -32,19 +32,80 @@ If you're new to Python, review these fundamentals:
 ## NumPy Coding Exercises (2 hours)
 
 ### Environment Setup
+- **Create a virtual environment**: This is an isolated workspace for this project. Each workspace/virtual environment has its own Python version and packages. Without this common environment, incompatible packages can be used together and break the code
+```bash
+conda create -n linear-algebra python=3.11
+# Creates a separate "workspace" called "linear-algebra"
 
-```python
-# Create a virtual environment
-# In your terminal:
-# python -m venv numpy-env
-# source numpy-env/bin/activate  # On Windows: numpy-env\Scripts\activate
+conda activate linear-algebra  
+# Switches into that workspace
 
-# Install required packages
-# pip install numpy matplotlib jupyter scipy pandas
+conda install numpy=1.24 pandas matplotlib
+# Install packages which only go to linear-algebra environment
+
+python my_code.py  # Uses this environment's Python & packages
+# Work in this environment
+
+conda deactivate
+#  DEACTIVATE when done
+
+conda env remove -n myenv
+# Delete environment (if you mess up), other Python projects stay safe
+
+# Environment 2: Different project
+conda create -n web-project python=3.9
+conda activate web-project
+conda install numpy=1.20 flask
+# NO CONFLICTS! Each is isolated
+```
+## VS Code Integration
+
+VS Code needs to know which environment to use:
+```bash
+1. Create environment → conda create -n ml-mastery
+2. In VS Code → Ctrl+Shift+P → "Python: Select Interpreter"
+3. Choose → "ml-mastery" environment
+4. Now VS Code uses that environment's Python!
+```
+### Verify Installation
+- Restart terminal, or run:
+```bash
+source ~/.bashrc  # or ~/.zshrc
+```
+- Open terminal/CLI and run: 
+```bash
+conda --version
 ```
 
-### Verify Installation
+**If installed**, you'll see:
+```bash
+conda 23.7.4
+# (or some version number)
+```
 
+**If NOT installed**, you'll see:
+```bash
+'conda' is not recognized as an internal or external command
+# (Windows)
+
+conda: command not found
+# (Mac/Linux)
+```
+### More detail check
+```bash
+conda info
+
+# Should show:
+#   - active environment
+#   - conda version
+#   - python version
+#   - base environment location
+# Check if you can see conda environments
+conda env list
+
+# Should show at least "base" environment
+```
+### Code for testing if package runs
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
