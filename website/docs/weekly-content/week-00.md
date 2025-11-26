@@ -105,6 +105,21 @@ conda env list
 
 # Should show at least "base" environment
 ```
+### Convert python script to jupyter notebook
+- Jupytext is particularly nice because it:
+
+    Maintains sync between .py and .ipynb files if you want
+    Recognizes cell markers like # %% in your Python file
+    Is well-maintained and widely used in the Jupyter ecosystem
+-  Install jupytex
+```bash
+    conda install -c conda-forge jupytext
+```
+- Convert the file
+```bash
+    jupytext --to notebook your_script.py
+```
+
 ### Code for testing if package runs
 ```python
 import numpy as np
