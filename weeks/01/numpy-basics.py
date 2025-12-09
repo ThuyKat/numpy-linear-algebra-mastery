@@ -25,7 +25,7 @@ print("Array with arange a4:", a4)
 a5 = np.linspace(0, 1, 5)
 print("Array with linspace a5:", a5)
 
-a6 = np.random.rand(2, 2)
+a6 = np.random.rand(2, 2) # 2x2 array with random floats in [0.0, 1.0)
 print("Random array a6:\n", a6)
 
 a7 = np.random.randint(0, 10, (2, 2))
